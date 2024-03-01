@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/3e8ecb4e4b.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="Images/logo.png" class="logo">
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">My Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Full Stack Web Developer</p>
+                <h1>Hi, I'm <span>Neeraj</span><br> From India</h1>
+            </div>
+        </div>
+    </div>
+    <!-- ---------------------about------------------- -->
+    <div id="about">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="Images/I.jpeg" >
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p> Experienced and passionate web developer with a strong background in front-end and back-end development. Skilled in HTML5, CSS3, JavaScript, and various frameworks such as ReactJS and NextJS for building dynamic and responsive web applications. <br /><br /> Proficient in server-side programming languages like Node.js, with expertise in database management using MySQL and MongoDB. <br /><br /> Detail-oriented with a commitment to delivering high-quality, efficient, and user-friendly solutions. Excellent problem-solving skills and ability to work collaboratively in a team environment. <br /><br />
+                </p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span><i class="fa-brands fa-react"></i></span>React Js</li>
+                        <li><span><i class="fa-brands fa-bootstrap"></i></span>Bootstrap</li>
+                        <li><span><i class="fa-brands fa-css3-alt"></i></span>CSS</li>
+                        <li><span><i class="fa-brands fa-js"></i></span>JavaScript</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>Graduation</span><br>From Rajasthan University in 2021</li>
+                        <li><span>Full Stack Web Developer Certification</span> <br>From Alma Better and IIT Guwahati<br></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <h2>Front-End Developer</h2>
+                    <p>Front-End Developers are responsible for building the user-facing portion of websites and web applications. They work closely with designers to implement the visual and interactive elements of a website or application. Front-End Developers use a combination of programming languages, frameworks, and libraries to create responsive, dynamic, and engaging user interfaces.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <h2>Back-End Developer</h2>
+                    <p>Back-End Developers are responsible for building and maintaining the server-side logic, databases, and integrations of web applications. They work closely with Front-End Developers and often collaborate with DevOps engineers to ensure the seamless functioning of web applications. Back-End Developers focus on the server-side aspects of web development, handling data processing, security, and server management.</p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="Images/we1.jpg">
+                    <div class="layer">
+                        <h3>Project 1</h3>
+                        <p>The aim of this project is to create an online learning platform that provides users with access to educational resources.
+                        </p>
+
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="Images/w2.webp">
+                    <div class="layer">
+                        <h3>Project 2</h3>
+                        <p>The aim of this project is to create an online learning platform that provides users with access to educational resources.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See More</a>
+        </div>
+    </div>
+    <!-- ----------------------Contact------------- -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="conract-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i>ns158350@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>7568992082</p>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/vansh_tiwari1/"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/neeraj-sharma-8a6582276/"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+
+                </div>
+                <div class="conract-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="copyrght">
+            <p>Copyrght © .Made with <i class="fa-solid fa-heart"></i> by Neeraj Sharma</p>
+        </div>
+    </div>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link")
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab")
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+</body>
+
+</html>
